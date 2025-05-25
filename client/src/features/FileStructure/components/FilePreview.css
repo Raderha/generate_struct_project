@@ -1,0 +1,79 @@
+/* src/features/FileStructure/components/FilePreview.css */
+.file-preview-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;                 
+  overflow: hidden;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+}
+
+
+.file-preview-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+}
+
+.file-preview-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f1f3f5;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.file-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.file-preview-content {
+  flex: 1;                      /* ✅ 가능한 공간 다 차지 */
+  overflow: auto;               /* ✅ 내부 코드가 넘치면 스크롤 */
+  padding: 0 12px 12px 12px;
+  background-color: #f8f9fa;
+}
+
+.code-content {
+  padding: 12px;
+  font-family: monospace;
+  font-size: 13px;
+  white-space: pre;
+  text-align: left;
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+/* 코드 하이라이팅을 위한 추가 스타일 */
+.code-content .keyword {
+  color: #8250df;
+}
+
+.code-content .string {
+  color: #0a3069;
+}
+
+.code-content .comment {
+  color: #6e7781;
+}
+
+.code-content .function {
+  color: #953800;
+}
+
+.code-content .tag {
+  color: #116329;
+}

@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "venv/bin/python",
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "[python]":{
+        "editor.defaultFormatter": "ms-python.python"
+    }
+}

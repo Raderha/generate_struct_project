@@ -1,0 +1,44 @@
+/* src/features/FileStructure/components/FileStructureViewer.css */
+.file-structure-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.file-node {
+  margin-left: 4px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-item:hover {
+  background-color: #f3f4f6;
+}
+
+.file-node-file:hover {
+  color: #2563eb;
+}
+
+.directory-icon {
+  display: inline-flex;
+  margin-right: 6px;
+  color: #4b5563;
+}
+
+.file-name {
+  font-size: 14px;
+}
+
+.file-children {
+  margin-left: 16px;
+}

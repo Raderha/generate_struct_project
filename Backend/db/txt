@@ -1,0 +1,6 @@
+& "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe" -u root -p project > project_dump.sql
+& "경로" -u [사용자 ID] -p [db이름] > [백업할 이름].sql
+
+
+& "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p project < project_dump.sql
+& "경로" -u [사용자 ID] -p [db이름] < [불러올 이름].sql

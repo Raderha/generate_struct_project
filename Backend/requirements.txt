@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+httpx
+python-dotenv
+sqlalchemy
+pymysql
+passlib[bcrypt]
+python-jose
+jinja2
+aiofiles
+python-multipart
+google-generativeai
+PyJWT
