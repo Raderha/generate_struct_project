@@ -15,8 +15,7 @@ import jwt
 from typing import List, Dict
 import time
 from pydantic import BaseModel
-from app.routers import kakao, google
-
+from app.routers import kakao, google, auth, project
 from pydantic import BaseModel
 
 class FileContentRequest(BaseModel):
@@ -48,7 +47,8 @@ app.add_middleware(
 
 app.include_router(kakao.router)
 app.include_router(google.router)
-
+app.include_router(auth.router)
+app.include_router(project.router)
 # 환경변수: BASE_URL (예: https://api.myapp.com)
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 
@@ -105,10 +105,10 @@ async def generate_code(request: GenerateRequest,
       token = authorization.replace("Bearer ", "").strip()
       try:
          payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=["HS256"])
-         user_email = payload.get("sub")
+         user_email = payload.get("sub")  # sub 필드에서 이메일 가져오기
          print(f"Decoded token payload: {payload}")
          if user_email is None:
-            raise HTTPException(status_code=401, detail="토큰에 user.email이 없습니다.")
+            raise HTTPException(status_code=401, detail="토큰에 sub 필드가 없습니다.")
       except jwt.ExpiredSignatureError:
          raise HTTPException(status_code=401, detail="토큰이 만료되었습니다.")
       except jwt.InvalidTokenError as e:

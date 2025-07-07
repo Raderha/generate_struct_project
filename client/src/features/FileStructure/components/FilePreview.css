@@ -25,6 +25,7 @@
 .file-preview-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 8px 12px;
   background-color: #f1f3f5;
   border-bottom: 1px solid #e5e7eb;
@@ -35,6 +36,76 @@
 
 .file-name {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.unsaved-indicator {
+  color: #dc2626;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.edit-button,
+.save-button,
+.cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.edit-button {
+  color: #6b7280;
+}
+
+.edit-button:hover {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.save-button {
+  color: #059669;
+}
+
+.save-button:hover {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.save-button:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.save-button:disabled:hover {
+  background-color: transparent;
+  color: #9ca3af;
+}
+
+.cancel-button {
+  color: #dc2626;
+}
+
+.cancel-button:hover {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.edit-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .file-preview-content {
@@ -55,6 +126,28 @@
   background-color: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 4px;
+}
+
+.code-editor {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  padding: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #1f2937;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.code-editor:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* 코드 하이라이팅을 위한 추가 스타일 */
